@@ -38,6 +38,11 @@ body {
     padding: 5px 20px;
     width: 100px;
   }
+  #restart {
+    margin: 0 auto;
+    font-weight: bold;
+    color: white;
+  }
   button:not(:last-child) {
     margin-right: 10px;
   }

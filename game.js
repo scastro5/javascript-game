@@ -8,6 +8,7 @@ const spanLives = document.querySelector('#lives')
 const spanTime = document.querySelector('#time')
 const spanRecord = document.querySelector('#record')
 const pResult = document.querySelector('#result')
+const btnRestart = document.querySelector('#restart')
 
 let canvasSize;
 let elementsSize;
@@ -52,7 +53,6 @@ function setCanvasSize() {
 }
 
 function startGame() {
-  console.log({ canvasSize, elementsSize });
 
   game.font = (elementsSize - 12) + 'px Verdana';
   game.textAlign = 'end';
@@ -178,6 +178,11 @@ btnUp.addEventListener('click', moveUp);
 btnRight.addEventListener('click', moveRight);
 btnLeft.addEventListener('click', moveLeft);
 btnDown.addEventListener('click', moveDown);
+btnRestart.addEventListener('click', restartGame);
+
+function restartGame () {
+  location.reload()
+}
 
 function moveByKeys (event) {
   if (event.key == 'ArrowUp') moveUp();
